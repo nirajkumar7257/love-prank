@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Again!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://tenor.com" alt="Sad Cat" class="gif">
+        <h1>Beautiful pls Man jao na! 😭</h1>
+        <p>Kitna code likh waogi yrr 🥺</p>
+        <div class="btn-group">
+            <a href="yes.html" class="btn yes-btn">Yes</a>
+            <!-- यह No बटन कर्सर ले जाते ही भागेगा -->
+            <button class="btn no-btn" id="run-btn">No</button>
+        </div>
+    </div>
+
+    <!-- बटन को भगाने वाला JavaScript कोड -->
+    <script>
+        const noBtn = document.getElementById('run-btn');
+        noBtn.addEventListener('mouseover', () => {
+            const i = Math.floor(Math.random() * (window.innerWidth - noBtn.clientWidth));
+            const j = Math.floor(Math.random() * (window.innerHeight - noBtn.clientHeight));
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = i + 'px';
+            noBtn.style.top = j + 'px';
+        });
+    </script>
+</body>
+</html>
