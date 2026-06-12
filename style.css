@@ -61,3 +61,8 @@ p {
 .btn:hover {
     transform: scale(1.1);
 }
+
+.tenor-gif-embed {
+    max-width: 200px;
+    margin: 0 auto 20px auto;
+}
