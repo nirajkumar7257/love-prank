@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Chance!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- तीसरा सुपर सैड GIF -->
+        <img src="supersad.gif" alt="Super Sad Cat" class="gif">
+        
+        <!-- बड़ी हेडिंग -->
+        <h1>beautiful pls Man jao na! 😭</h1>
+        <!-- छोटा सब-टेक्स्ट -->
+        <p>Kitna code likh waogi yrr 🥺 bhut glt baat hai</p>
+        
+        <div class="btn-group">
+            <a href="yes.html" class="btn yes-btn">Yes</a>
+            <!-- यह No बटन स्क्रीनशॉट जैसा ही दिखेगा लेकिन कर्सर ले जाते ही भागेगा -->
+            <button class="btn no-btn" id="run-btn">No</button>
+        </div>
+    </div>
+
+    <!-- बटन को जादुई तरीके से भगाने वाला JavaScript कोड -->
+    <script>
+        const noBtn = document.getElementById('run-btn');
+        const moveButton = () => {
+            const i = Math.floor(Math.random() * (window.innerWidth - noBtn.clientWidth));
+            const j = Math.floor(Math.random() * (window.innerHeight - noBtn.clientHeight));
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = i + 'px';
+            noBtn.style.top = j + 'px';
+        };
+        noBtn.addEventListener('mouseover', moveButton);
+        noBtn.addEventListener('touchstart', moveButton);
+    </script>
+</body>
+</html>
